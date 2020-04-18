@@ -1,4 +1,9 @@
 import '../css/style.css'
-let text = "Hola! form con css "
-console.log(text)
-document.body.innerHTML = `<p>${text}</p>`
+import textFunction from './text'
+textFunction()
+if (module.hot) {
+    module.hot.accept('./text.js', function () {
+        console.log("Recargado en caliente")
+        textFunction()
+    })
+}
