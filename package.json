@@ -8,7 +8,8 @@
     "build:local": "webpack --entry ./index.js --output ./dist/local.js --mode development",
     "build:external": "webpack --config ./external/webpack.config.js",
     "build:multi": "webpack --config ./multi-entries/webpack.config.js",
-    "build:css-loader": "webpack --config ./css-style/webpack.config.js"
+    "build:css-loader": "webpack --config ./css-style/webpack.config.js",
+    "build:css-plugins": "webpack --config ./plugins/webpack.config.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,8 @@
   "dependencies": {},
   "devDependencies": {
     "css-loader": "2.1.1",
+    "html-webpack-plugin": "3.2.0",
+    "mini-css-extract-plugin": "0.7.0",
     "style-loader": "1.1.4",
     "webpack": "4.32.2",
     "webpack-cli": "3.3.2"
